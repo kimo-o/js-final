@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS-Final</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- MAIN -->
+    <div class="main">
+      <!-- HEADER -->
+      <div class="header">
+        <!-- NAME FORM & GREETING TEXT -->
+        <form class="js-form form nameForm">
+          <input
+            type="text"
+            placeholder="What's your name? ⏎"
+            class="nameInput"
+          />
+        </form>
+        <div class="js-greetings greetings greetingsText"></div>
+      </div>
+      <!-- LEFT NAV -->
+      <div class="left-nav">
+        <div class="left-toDolist">
+          <p>⏳ Pending</p>
+          <ul class="js-toDoList pendingList"></ul>
+        </div>
+      </div>
+      <!-- CENTER -->
+      <div class="center-top">
+        <div class="js-clock clock">
+          <p>00:00</p>
+        </div>
+      </div>
+      <div class="center-bottom">
+        <form class="js-toDoForm toDoForm">
+          <input
+            type="text"
+            placeholder="Write down your things to do today."
+            class="toDoInput"
+          />
+        </form>
+      </div>
+      <!-- RIGHT NAV -->
+      <div class="right-nav">
+        <div class="right-toDolist">
+          <p>Finished ⌛</p>
+          <ul class="js-toDofinList finishedList"></ul>
+        </div>
+      </div>
+      <!-- FOOTER -->
+      <div class="footer"><span class="js-weather weather"></span></div>
+    </div>
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+body {
+  font-family: "Helvetica";
+  background-color: #2c3e50;
+  width: 100%;
+  height: 100vh;
+}
+
+/* MAIN */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 6fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 2fr 1fr 1fr;
+  grid-template-areas:
+    "    .        .         header        .         .   "
+    "    .        .           .           .         .   "
+    "left-nav left-nav   center-top  right-nav right-nav"
+    "left-nav left-nav center-bottom right-nav right-nav"
+    "    .        .           .           .         .   "
+    "    .        .         footer        .         .   ";
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-nav {
+  grid-area: left-nav;
+  display: flex;
+  justify-content: center;
+}
+
+.center-top {
+  grid-area: center-top;
+  display: flex;
+  justify-content: center;
+}
+
+.center-bottom {
+  grid-area: center-bottom;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.right-nav {
+  grid-area: right-nav;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CLOCK */
+.clock {
+  grid-area: clock;
+  font-size: 11vw;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* GREETING */
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+.nameForm {
+  grid-area: nameForm;
+}
+
+.greetingsText {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.nameInput {
+  /* bg transparent */
+  background-color: #11ffee00;
+  border: none;
+  text-align: center;
+  outline-style: none;
+  width: 200px;
+  height: 30px;
+  color: white;
+  font-size: 2rem;
+}
+
+.nameInput:hover {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+}
+.nameInput:focus {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+.nameInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+}
+
+.nameInput:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.nameInput:focus::-moz-placeholder {
+  color: transparent;
+}
+.nameInput:focus::-ms-input-placeholder {
+  color: transparent;
+}
+.nameInput:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+/* TO DO */
+.toDoInput {
+  background-color: #11ffee00;
+  border: none;
+  border-bottom: 1px solid white;
+  text-align: center;
+  outline-style: none;
+  width: 400px;
+  height: 30px;
+  color: white;
+  font-size: 2rem;
+}
+
+.toDoInput:hover {
+  border-bottom: 1px dashed white;
+}
+.toDoInput:focus {
+  border-bottom: 1px dashed white;
+}
+
+.toDoInput::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.3rem;
+}
+
+.toDoInput:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.toDoInput:focus::-moz-placeholder {
+  color: transparent;
+}
+.toDoInput:focus::-ms-input-placeholder {
+  color: transparent;
+}
+.toDoInput:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.left-toDolist {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.right-toDolist {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.left-toDolist p,
+.right-toDolist p {
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+}
+
+ul {
+  padding: 0;
+}
+
+li > button {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+li > button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+li {
+  margin-bottom: 5px;
+  list-style: none;
+  border-bottom: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.right-toDolist {
+  display: flex;
+  flex-direction: column;
+}
+
+/* WEATHER */
+.weather {
+  grid-area: weather;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+}
+
+/* BACKGROUND IMAGE */
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+  object-fit: cover;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
